@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>YUNICO Clip Archive</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+<h1>CLIP ARCHIVE</h1>
+<p>치지직 <strong>유니코 YUNICO</strong></p>
+</header>
+
+<main class="container">
+
+<section class="search-area">
+
+<div class="period-control">
+<select id="period-filter" aria-label="클립 기간 필터">
+<option value="all">전체 기간</option>
+<option value="24h">24시간</option>
+<option value="7d">7일</option>
+<option value="30d">30일</option>
+<option value="3m">3개월</option>
+<option value="6m">6개월</option>
+<option value="1y">1년</option>
+</select>
+</div>
+
+<div class="search-box">
+
+<svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+<circle cx="10.5" cy="10.5" r="6.5"></circle>
+<line x1="15.5" y1="15.5" x2="21" y2="21"></line>
+</svg>
+
+<input id="search" type="text" placeholder="클립 제목 또는 날짜 검색">
+
+<button id="clear-search" aria-label="검색 초기화">×</button>
+
+</div>
+
+<div class="right-controls">
+
+<div class="sort-buttons">
+<button class="sort-button active" data-sort="latest">최신순</button>
+<button class="sort-button" data-sort="views">인기순</button>
+</div>
+
+<button id="theme-toggle" class="theme-button" aria-label="화면모드 변경">
+
+<svg class="theme-icon sun-icon" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="5"></circle>
+<line x1="12" y1="1" x2="12" y2="4"></line>
+<line x1="12" y1="20" x2="12" y2="23"></line>
+<line x1="1" y1="12" x2="4" y2="12"></line>
+<line x1="20" y1="12" x2="23" y2="12"></line>
+<line x1="4" y1="4" x2="7" y2="7"></line>
+<line x1="17" y1="17" x2="20" y2="20"></line>
+<line x1="17" y1="7" x2="20" y2="4"></line>
+<line x1="4" y1="20" x2="7" y2="17"></line>
+</svg>
+
+<svg class="theme-icon moon-icon" viewBox="0 0 24 24">
+<path d="M21 12.8A9 9 0 1 1 11.2 3A7 7 0 0 0 21 12.8Z"></path>
+</svg>
+
+</button>
+
+</div>
+
+</section>
+
+<section id="video-list" class="video-list"></section>
+
+<nav id="pagination" class="pagination"></nav>
+
+</main>
+
+<script src="./clip.js"></script>
+
+</body>
+</html>
